@@ -1,0 +1,219 @@
+body {
+
+    font-family: 'Rubik', sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 5px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+nav{
+    color: dodgerblue;
+}
+nav a:hover{
+    color: #5a109d;
+
+}
+h1{
+    font-family: 'Lobster Two', cursive;
+}
+
+img {
+    max-width: 100%;
+}
+
+body > .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header img {
+    height: 70px;
+}
+
+main {
+    flex: 1;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+.series-list {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+}
+
+label {
+    display: block;
+}
+
+input,
+textarea,
+select {
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    max-width: 50%;
+    width: 150px;
+}
+
+.flash {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin : 1rem 0;
+    border-radius: 5px;
+}
+
+.flash-success {
+    background-color: #81d034;
+
+}
+
+/**
+ * Début css pour la page de détail d'une série
+ */
+.serie-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+}
+
+.serie-details-infos > div {
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 700px) {
+    .serie-details {
+        grid-template-columns: 300px 1fr;
+    }
+}
+/**
+ * Fin css pour la page de détail d'une série
+ */
+
+.seasons article {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.seasons article img {
+    max-height: 200px;
+    margin-right: 0.6rem;
+}
+
+
+.card{
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+    margin: 1px 3px;
+    border: #999999 solid 1px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 1px #5eb5e0;
+    background-color: white;
+    justify-content:space-around;
+}
+.card:hover{
+    transition: transform .3s;
+    transform: scale(1.1);
+
+}
+
+.card img{
+    border-radius: 40% ;
+}
+
+.wrapper {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+
+}
+
+.filtre{
+    color: dodgerblue;
+    padding: 6px 10px;
+    margin: 2px;
+}
+
+.diviseur{
+    border-top: 1px solid;
+    margin: 6px;
+    color: #dedede;
+}
+
+#registration_form_technologies{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#registration_form_technologies label{
+    padding-right: 20px;
+}
+
+#registration_form_technologies input{
+width: 20px;
+}
+
+.btn{
+    width: 100px;
+    border: solid 1px;
+    border-radius: 10%;
+}
+.messWarning{
+
+    background-color: rgb(248, 236, 197);
+    color: #867503;
+    font-weight: bold;
+border-radius: 5%;
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.filtreContainer{
+    padding: 30px 20px;
+    box-shadow: 0px 3px 5px #cbcaca;
+    margin: 10px 2px;
+}
+
+.icon{
+    height:25px;
+    width: 25px;
+    color: dodgerblue;
+    filter: invert(44%) sepia(69%) saturate(3430%) hue-rotate(196deg) brightness(105%) contrast(101%);
+}
+.technologyIcon{
+    height: 30px;
+    width: 30px;
+    margin: 0px 5px;
+}
+
+.delimitor{
+    border-bottom: grey solid 1px;
+    margin-bottom: 5px;
+}
+
+td{
+    border-bottom: 1px solid #c0c0c0;
+}

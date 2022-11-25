@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h2>Envoyer un message à {{ user.username }}</h2>
+    <form>
+        <div><label for="sujet">Sujet</label> <input type="text" name="sujet" id="sujet"></div>
+        <div><label for="corps">Corps</label> <textarea id="corps" name="corps" cols="20" rows="5" style="width: 400px"></textarea></div>
+        <div><input type="submit"></div>
+    </form>
+
+{% endblock %}
+
+{% block title %}
+    Envoyer un message à {{ user.username }}
+{% endblock %}
+

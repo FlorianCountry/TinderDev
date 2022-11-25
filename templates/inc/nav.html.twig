@@ -1,0 +1,16 @@
+<nav>
+    <ul class="">
+        <li><a href="{{ path('accueil') }}">Accueil</a></li>
+
+        {% if app.user %}
+
+            <li><a href="{{ path('tinderdev_logout') }}">Se déconnecter</a></li>
+            <li>{{ app.user.username}} ({{ app.user.friend | length }}) </li>
+
+        {% else %}
+            <li><a href="{{ path('tinderdev_login') }}">Se connecter </a></li>
+            <li><a href="{{ path('app_register') }}">Créer un compte</a></li>
+        {% endif %}
+
+    </ul>
+</nav>

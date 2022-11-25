@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+
+    {% if app.user %}
+        <div class="filtreContainer">
+
+            <div style="text-align: left"> Filter par langage :
+                {% for technology in technologies %}
+                    <a href="{{ path('filtre_langue', {'id':technology.id}) }}" class="filtre">{{ technology.name }}</a>
+
+                {% endfor %}
+
+            </div>
+        </div>
+    {% elseif not app.user %}
+        <div class="messWarning">Vous devez être authentifié pour voir la liste des développeurs</div>
+
+    {% endif %}
+    <div>Il y a actuellement {{ nbUsers }} développeurs en base.</div>
+    {% if  app.user %}
+        <table>
+            {% for dev in devs %}
+                {% if dev is not same as app.user %}
+                    <tr class="delimitor">
+                        <td>{{ dev.username }} ({{ dev.friend | length }})</td>
+                        <td> {% for technology in dev.technologies %}
+                                <img src="{{ asset('img/'~technology.name~'.png') }}" class="technologyIcon" alt="{{ technology.name }}"></a>
+                            {% endfor %}
+
+                        </td>
+                        {% if app.user in dev.friends%}
+                            <td><a href="{{ path('user_block_friend', {'id': dev.id}) }}"><img src="{{ asset('img/block-user.png') }}" class="icon"></a></td>
+                        {% else %}
+                            <td><a href="{{ path('user_add_friend', {'id': dev.id}) }}"><img src="{{ asset('img/add-user.png') }}" class="icon"></a></td>
+                        {% endif %}
+                        <td><a href="{{ path('send_message', {'id': dev.id}) }}"><img src="{{ asset('img/email.png') }}" class="icon"></a></td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+    {% endif %}
+
+{% endblock %}
