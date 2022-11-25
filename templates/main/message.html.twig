@@ -3,11 +3,11 @@
 {% block body %}
 
     <h2>Envoyer un message à {{ user.username }}</h2>
-    <form>
-        <div><label for="sujet">Sujet</label> <input type="text" name="sujet" id="sujet"></div>
-        <div><label for="corps">Corps</label> <textarea id="corps" name="corps" cols="20" rows="5" style="width: 400px"></textarea></div>
-        <div><input type="submit"></div>
-    </form>
+
+    {{ form_start(messageForm) }}
+    {{ form_widget(messageForm) }}
+    <button>Envoyer</button>
+    {{ form_end(messageForm) }}
 
 {% endblock %}
 

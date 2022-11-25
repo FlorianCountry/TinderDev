@@ -80,40 +80,10 @@ select {
 }
 
 .flash-success {
-    background-color: #81d034;
+    background-color: #d4ffaa;
+    color: darkgreen;
+    font-weight: bold;
 
-}
-
-/**
- * Début css pour la page de détail d'une série
- */
-.serie-details {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 30px;
-}
-
-.serie-details-infos > div {
-    margin-bottom: 1rem;
-}
-
-@media screen and (min-width: 700px) {
-    .serie-details {
-        grid-template-columns: 300px 1fr;
-    }
-}
-/**
- * Fin css pour la page de détail d'une série
- */
-
-.seasons article {
-    display: flex;
-    margin-bottom: 1rem;
-}
-
-.seasons article img {
-    max-height: 200px;
-    margin-right: 0.6rem;
 }
 
 
